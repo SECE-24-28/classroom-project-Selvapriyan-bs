@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid;
+            margin-top:20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+        }
+     button{
+        margin-left:340px;
+     }
+    </style>
+</head>
+<body>
+<table>
+    <caption><b>Student Registeration Form</b></caption>
+   <form action="result.html">
+   <tr>
+   <td><label for="">Name:</label></td>
+   <td><input type="text" minlength="3" maxlength="30"></td>
+   </tr>
+   <tr>
+   <td><label for="">Mail id:</label></td>
+   <td><input type="email"></td>
+   </tr>
+   <tr>
+   <td><label>Contact Number:</label></td>
+   <td><input type="tel" pattern="[0-9]{10}"></td>
+   </tr>
+   <tr>
+    <td><label>Mark in HSC:</label></td>
+    <td><input type="number" min="0" max="500" ></td>
+   </tr>
+   <tr>
+    <td><label>Mark in SSLC:</label></td>
+    <td><input type="number" min="0" max="500" ></td>
+   </tr>
+   <tr>
+    <td><label>Father Name:</label></td>
+    <td><input type="text" minlength="4" maxlength="33"></td>
+   </tr>
+   <tr>
+    <td><label>Mother Name:</label></td>
+    <td><input type="text" minlength="4" maxlength="33"></td>
+   </tr>
+   </table>
+   <br>
+   <button type="submit">Submit</button>
+   </form>
+</body>
+</html>
