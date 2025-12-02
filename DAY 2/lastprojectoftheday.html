@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgb(245, 245, 245);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1 1 300px;
+            padding: 20px;
+        }
+
+        #image {
+             width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2><b>Representing Flexbox Using an Image and Text Content</b></h2>
+
+    <div class="container">
+        <div class="box">
+            <img id="image" src="image4.avif" alt="Cafe espresso being made">
+        </div>
+
+        <div class="box">
+            <p>This is a café image showing an espresso being made with rich, beautiful flavors.</p>
+        </div>
+    </div>
+
+</body>
+</html>

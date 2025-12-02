@@ -1,0 +1,59 @@
+body
+{
+    height: 200vh;
+}
+h1{
+    background-color: lightblue;
+}
+.outer-container {
+    border:1px solid rgb(255, 0, 0);
+    width:85%;
+    height:90%;
+}
+.inner-container {
+        position: relative;
+
+    margin:30px;
+    background-color: lightskyblue;
+    border:1px solid rgb(0, 0, 255);
+    height:80vh;
+    width: 90%;
+}
+.abs{
+    position: absolute;
+    top:0px;
+    left: 200px;
+    background-color: aquamarine;
+    border: 1px solid rgb(255, 136, 0);
+    width: 100px;
+    height: 100px;
+}
+.rel{
+    position: relative;
+    top: 10px;
+    left:100px;
+    background-color: aqua;
+    left: 150px;
+    border: 1px solid rgb(0, 136, 255);
+    width: 100px;
+    height: 100px;
+}
+.fix{
+
+    background-color:antiquewhite;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    border: 1px solid rgb(0, 255, 136);
+    width: 100px;
+    height: 100px;
+}
+.sti{
+    position: sticky;
+    top: 200px;
+    left: 0px;
+    background-color: burlywood;
+    border: 1px solid rgb(136, 0, 255);
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,61 @@
+nav{
+    position: fixed;
+    background-color: black;
+    height:20px;
+    width:100%;
+    text-align: right;
+}
+a{
+    padding-right:10px;
+    color: white;
+    text-decoration: none;
+}
+.a1{
+ padding-left:10px;
+}
+*{
+    padding:0px;
+    margin:0px;
+}
+h1{
+    padding-left:10px;
+    top:0px;
+    left:0px;
+    position:sticky;
+    padding-top:25px;
+}
+.hm{
+    padding:10px;
+    height:1200px;
+    background-color: lightsalmon;
+}
+.abt{
+    height:1200px;
+    background-color: lightblue;
+    padding:10px;
+}
+p{
+    padding-left:20px;
+    font-size: 20px;
+}
+.cont{
+    padding:10px;
+    background-color: lime;
+    height: 1200px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.image{
+    border-radius:15px;
+}
+.button{
+text-align: right;
+}
+.container{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap:10px;
+}
