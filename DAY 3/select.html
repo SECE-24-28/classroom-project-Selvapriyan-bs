@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+             margin-left:170px;
+             margin-right:10px;
+          }
+        button{
+            width:75px;
+            padding:10px;
+            border-radius:7px;
+            color:white;
+            background-color: black;
+        }
+        button:hover{
+            color:black;
+            background-color:white;
+            transition-duration:0.2s;
+        }
+        img{
+            border-radius:10px;
+        }
+    </style>
+    <script>
+    // function demo(){
+    //     let na=document.getElementById("si").value;
+    //     alert(na);
+    // } first commit
+    let num=0;
+    let arr=["Coffee.png","in.jpg","FB.png"]
+    function prev(){
+        let img=document.getElementById("im");
+        // let img2="fb.jpg";
+        // let img3="Coffee.png";
+        // if(img.src.includes(img2)){
+        // img.src=img3;
+        // }
+        // else{
+        //     img.src=img2;
+        // }
+        num--;
+        if(num<0){
+            num=2;
+        }
+        // alert(arr[num]);
+        img.src=arr[num];
+    }
+    function next(){
+        let img=document.getElementById("im");
+        // alert(num);
+        num++;
+        if(num>2){
+          num=0;
+        }
+        img.src=arr[num];
+    }
+    </script>
+</head>
+<body>
+    <!-- <select name="" id="si" onchange="demo()">
+     <option value="circket">circket</option>
+     <option value="vollyball">Vollyball</option>
+     <option value="Chess">Chess</option> -->
+      <!--first commit -->
+      <img src="Coffee.png" alt="" id="im" width="500px" height="500px">
+      <br>
+      <button onclick="prev()" id="first">Previous</button>
+      <button onclick="next()" id="ne">Next</button>
+    </select>
+</body>
+</html>

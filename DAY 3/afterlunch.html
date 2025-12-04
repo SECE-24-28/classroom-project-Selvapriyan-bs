@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .re{
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+        margin:10px;
+        padding-left:10px
+    }
+    button{
+        color:white;
+        padding:10px;
+        border-radius:10px;
+        background-color: black;
+    }
+    fieldset{
+        border:none;
+    }
+    button:hover{
+        color:black;
+        background-color:white;
+        border-color:white;
+        transition-duration:0.7s;
+    }
+</style>
+<script>
+    function add(){
+        let a=parseInt(document.getElementById("t1").value);
+        // alert(na);
+        let b=parseInt(document.getElementById("t2").value);
+        document.getElementById("t3").value=a+b;
+        //  <!--direct adding of a+b will only concat to add the value use praseInt() to change-->
+    }
+    function sub(){
+        let a=parseInt(document.getElementById("t1").value);
+        // alert(na);
+        let b=parseInt(document.getElementById("t2").value);
+        document.getElementById("t3").value=a-b;
+    }
+        //  <!--direct adding of a+b will only concat to add the value use praseInt() to change-->
+    function mul(){
+        let a=parseInt(document.getElementById("t1").value);
+        // alert(na);
+        let b=parseInt(document.getElementById("t2").value);
+        document.getElementById("t3").value=a*b;
+        //  <!--direct adding of a+b will only concat to add the value use praseInt() to change-->
+    }
+    function div(){
+        let a=parseInt(document.getElementById("t1").value);
+        // alert(na);
+        let b=parseInt(document.getElementById("t2").value);
+        document.getElementById("t3").value=a/b;
+        //  <!--direct adding of a+b will only concat to add the value use praseInt() to change-->
+    }
+    
+    // console.log(demo())
+</script>
+</head>
+<body>
+  <h1>BASIC CALCULATOR</h1>
+ <fieldset>
+    <Table>
+    <tr>
+        <td>First Number:</td>
+        <td><input type="number" placeholder="" id="t1"></td>
+    </tr>
+    <tr>
+        <td>Second Number:</td>
+        <td><input type="number" placeholder="" id="t2"></td>
+    </tr>
+    <tr>
+        <td>Result:</td>
+        <td><input type="number" placeholder="Result" id="t3"></td>
+    </tr>
+    </Table>
+    </fieldset> 
+    <div class="re">
+    <button onclick="add()">addition</button>
+    <button onclick="sub()">subract</button>
+    </div>
+    <br>
+    <div class="re">
+    <button onclick="mul()">multiply</button>
+    <button onclick="div()">divide</button>
+     </div>
+</body>
+</html>
