@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+<script>
+//  function press(){
+//     to insert an text
+//     let body=document.getElementById("body");
+//     let hd=document.createElement("h1");
+//     hd.innerHTML="i am from India";
+//     // hd.style.backgroundColor="black";
+//     hd.style.color="black";
+//     body.appendChild(hd)
+    
+//     to replace an content in html
+//     let body=document.getElementById("cl");
+//     hd=document.createElement("h1");
+//     hd="Peacock is our national animal";
+//     body.innerHTML=hd;
+
+//     to remove an text;
+//    let body=document.getElementById("body");
+//    let head=document.getElementById("sl");
+//    alert("Deletion..   ")
+//    body.removeChild(head);
+//  }
+
+// function press(){
+
+// }
+</scripts> -->
+<script>
+    function press(){
+        let text=document.getElementById("val").value;
+        let base=document.getElementById("it");
+        let li=document.createElement("li");
+        li.innerText=text;
+        base.append(li);
+        document.getElementById("val").value="";
+          }
+</script>
+</head>
+<body id="body">
+<input type="text" id="val">
+    <!-- <h1 id="sl">Heading tag</h1> -->
+    <button id="bt" onclick="press()">add</button>
+    <!-- <script>
+    let btn=document.getElementById("bt");
+    btn.addEventListener("click",function(){
+    alert("Success");
+});
+</script> -->
+<ol id="it">
+</ol>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-left:5px;
+            height:30px;
+        }
+        input{
+            height:26px;
+        }
+        li{
+            cursor:pointer;
+            margin-bottom:5px;
+        }
+        li button{
+            margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Simple To-Do List</h1>
+
+<input type="text" id="in" placeholder="Enter Task">
+<button id="bt">Add</button>
+
+<ol id="orderlist"></ol>
+
+<script>
+const input = document.getElementById("in");
+const addBtn = document.getElementById("bt");
+const list = document.getElementById("orderlist");
+
+addBtn.addEventListener("click", addTask);
+
+function addTask(e) {
+    e.preventDefault();
+    const text = input.value;
+
+    if (text.trim() === "") {
+        alert("Enter a value...");
+        return;
+    }
+
+    const li = document.createElement("li");
+    li.textContent = text;
+    li.addEventListener("click", function () {
+        if (li.style.textDecoration === "line-through") {
+            li.style.textDecoration = "none";
+        } else {
+            li.style.textDecoration = "line-through";
+        }
+    });
+
+    const del = document.createElement("button");
+    del.textContent = "Delete";
+
+    del.addEventListener("click", function (event) {
+        event.stopPropagation();
+        li.remove();
+    });
+
+    li.appendChild(del);
+    list.appendChild(li);
+
+    input.value = "";
+}
+</script>
+
+</body>
+</html>

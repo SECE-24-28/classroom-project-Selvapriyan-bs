@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            flex-flow:row wrap;
+        }
+        /* table{
+            border:1px solid black;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <table>
+    <tr>
+    <td><h2 id="h">3</h2></td><td><h2 id="m">0</h2></td><td><h2 id="clock"></h2></td>
+    </td>
+    </tr>    
+</table>
+    <script>
+    i=1;
+    function hour(){
+    let hou=document.getElementById("h").innerHTML;
+    let hr=parseInt(hou);
+    if(hr<12){
+        hr++;
+    }
+    else{
+        hr=1;
+    }
+    document.getElementById("h").innerHTML=hr;
+    }
+  function min(){
+   let mm=document.getElementById("m").innerHTML;
+   let m=parseInt(mm);
+   if(m<60){
+    m++;
+   }
+   else{
+    m=0;
+    hour();
+   }
+   document.getElementById("m").innerHTML = m
+  }
+   function s(){
+    let s=document.getElementById("clock");
+    s.innerHTML=i;
+    if(i<60){
+        i++
+    }
+    else{
+        i=1
+        min();
+    }
+   }
+    setInterval(s,1);
+    </script>
+</body>
+</html>
