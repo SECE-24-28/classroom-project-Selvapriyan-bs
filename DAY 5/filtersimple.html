@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <p id="para"></p>
+    <script>
+  let arr=["Arun","Dhanush","Surya","Vijay"]
+  let input=document.getElementById("in")
+  let para=document.getElementById("para")
+  arr.forEach(emp=>{
+   let text=document.createElement("p")
+   text.innerHTML=emp
+   para.appendChild(text)
+  });
+
+input.addEventListener("input",()=>
+{
+    para.innerHTML=""
+arr.forEach(emp=>{
+    if((emp.toLowerCase()).includes((input.value.toLowerCase()))){
+let text=document.createElement("p")
+text.innerHTML=emp
+para.appendChild(text)
+  
+}});
+})
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          margin:0;
+          padding:0;
+        }
+        #fetch{
+            background-color:green;
+            border-color:green;
+            border-radius:10px;
+            margin-top:200px;
+            top:100px;
+            left:300px;
+            margin-left:300px;
+            padding:15px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #clear{
+            border-color:red;
+            background-color:red;
+            color:white;
+            border-radius:10px;
+             margin-top:200px;
+            margin-left:5px;
+             padding:16px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        input{
+            /* padding:px; */
+            padding-left:5px;
+            padding-top:5px;
+            padding-bottom:5px;
+            padding-right:10px;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+            <td>
+        <button id="fetch">Fetch</button>
+    </td>
+    <td>
+        <button id="clear">Clear</button>
+    </td>
+    </tr>    
+    </table>
+    </div>
+    <input type="text" name="" id="search"  placeholder="Enter Name to search">
+    <button id="bt">Click to load</button>
+    <p id="pa"></p>
+<script>
+    let btn=document.getElementById("bt")
+    let para=document.getElementById("pa")
+    let input=document.getElementById("search")
+    input.addEventListener("click",async()=>{
+        const res= await fetch("https://jsonplaceholder.typicode.com/users")
+        const userdata=await res.json();
+        para.innerHTML=""
+        userdata.forEach(users=>{
+            if((users.name.toLowerCase()).includes((input.value.toLowerCase()))){
+                let text=document.createElement("p");
+                text.innerHTML=`Name:<b>${users.name}</b><br> UserName:${users.username}<br>${users.email}`
+                para.appendChild(text)
+        }
+    })
+    })
+    btn.addEventListener("click",async()=>{
+        try{
+        const res= await fetch("https://jsonplaceholder.typicode.com/users")
+        const userdata=await res.json();      
+        userdata.forEach(users=> {
+        let text=document.createElement("p");
+        text.innerHTML=`Name:<b>${users.name}</b><br> UserName:${users.username}<br>${users.email}`
+        para.appendChild(text)
+       });
+       }
+       catch(error){
+       let t=document.createElement("p");
+       t.textContent="there is some error"
+       para.appendChild(t)
+       }
+    });
+    </script>
+</body>
+</html>
