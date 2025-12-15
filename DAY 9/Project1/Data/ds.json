@@ -1,0 +1,28 @@
+{
+  "User": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "hello@123",
+      "role": "admin",
+      "date": "2024-10-05"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "hello@123",
+      "role": "user",
+      "date": "2024-01-02"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "email": "Alice.Johnson@example.com",
+      "password": "aloiceand@123",
+      "role": "user",
+      "date": "2024-01-02"
+    }
+  ]
+}
